@@ -9,6 +9,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'gatsby';
+import Layout from '../components/Layout/Layout';
 import withRoot from '../withRoot';
 
 const styles = theme => ({
@@ -40,7 +41,8 @@ class Index extends React.Component {
     const { open } = this.state;
 
     return (
-      <div className={classes.root}>
+        <>
+        <Layout>
         <Dialog open={open} onClose={this.handleClose}>
           <DialogTitle>Super Secret Password</DialogTitle>
           <DialogContent>
@@ -64,7 +66,8 @@ class Index extends React.Component {
         <Button variant="contained" color="secondary" onClick={this.handleClick}>
           Super Secret Password
         </Button>
-      </div>
+        </Layout>
+        </>
     );
   }
 }
