@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `jumpsuit.life`,
+    title: `JUMPSUIT.life`,
     description: `Powered by Gatsby and Drupal`,
     author: `broeker@gmail.com`,
     slogan: 'And you shall know me by the color of my jumpsuit',
@@ -12,7 +12,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
-  //`gatsby-plugin-styled-components`,
+    `gatsby-plugin-styled-components`,
 
   ]
 };

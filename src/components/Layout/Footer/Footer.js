@@ -10,7 +10,7 @@ const styles = theme => ({
         backgroundColor: theme.palette.secondary.main,
         paddingTop: theme.spacing.unit * 2,
         paddingBottom: theme.spacing.unit * 8,
-        color: '#fff',
+        color: '#ffffff',
         marginTop: theme.spacing.unit * 12,
     },
     quote: {

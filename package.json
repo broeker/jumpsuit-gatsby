@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "latest",
+    "babel-plugin-styled-components": "^1.10.0",
     "core-js": "^2.6.5",
     "gatsby": "latest",
     "gatsby-image": "^2.0.40",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-transformer-sharp": "^2.1.18",
     "jss": "latest",
     "prop-types": "latest",
@@ -16,7 +18,11 @@
     "react-dom": "latest",
     "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.0",
-    "react-jss": "^8.1.0"
+    "react-jss": "^8.1.0",
+    "styled-components": "^4.2.0",
+    "typeface-baloo-bhaina": "0.0.72",
+    "typeface-roboto": "0.0.54",
+    "typeface-rubik": "0.0.72"
   },
   "scripts": {
     "develop": "gatsby develop",

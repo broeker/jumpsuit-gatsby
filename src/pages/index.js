@@ -43,19 +43,9 @@ class Index extends React.Component {
     return (
         <>
         <Layout>
-        <Dialog open={open} onClose={this.handleClose}>
-          <DialogTitle>Super Secret Password</DialogTitle>
-          <DialogContent>
-            <DialogContentText>1-2-3-4-5</DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button color="primary" onClick={this.handleClose}>
-              OK
-            </Button>
-          </DialogActions>
-        </Dialog>
+            <h1>Foo</h1>
         <Typography variant="h4" gutterBottom>
-          Material-UI
+          Jumpsuit Material-UI
         </Typography>
         <Typography variant="subtitle1" gutterBottom>
           example project

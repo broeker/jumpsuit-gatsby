@@ -8,3 +8,6 @@
 // export const wrapRootElement = ({ element }) => {
 //   return <WithRoot key={Math.random()}>{element}</WithRoot>;
 // };
+require("typeface-roboto");
+require("typeface-rubik");
+require("typeface-baloo-bhaina");

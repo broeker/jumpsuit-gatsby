@@ -6,7 +6,6 @@ import orange from '@material-ui/core/colors/orange';
 import blue from '@material-ui/core/colors/blue';
 
 // A theme with custom primary and secondary color.
-// It's optional.
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -22,6 +21,7 @@ const theme = createMuiTheme({
   },
   typography: {
     useNextVariants: true,
+    fontFamily: 'Baloo Bhaina',
   },
 });
 

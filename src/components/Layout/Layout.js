@@ -12,19 +12,15 @@ import { StaticQuery, graphql } from "gatsby"
 import { withStyles } from '@material-ui/core/styles';
 import Header from './Header/Header';
 import Footer from './Footer/Footer'
+import { createGlobalStyle } from "styled-components";
 
 const styles = theme => ({
-  root: {
+  main: {
     width: 'auto',
+    marginLeft: theme.spacing.unit * 3,
+    marginRight: theme.spacing.unit * 3,
     [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]: {
       width: '100%', 
-      marginLeft: 'auto',
-      marginRight: 'auto',
-    },
-  },
-  main: {
-    [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]: {
-      width: 1100, 
       marginLeft: 'auto',
       marginRight: 'auto',
     },
@@ -60,7 +56,6 @@ const {children, classes} = props;
                     title={data.site.siteMetadata.title}
                 />
             <div className={classes.main}>
-
                 <main>
                     {children}
                 </main>
