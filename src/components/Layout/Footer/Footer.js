@@ -12,14 +12,14 @@ const styles = theme => ({
         marginTop: theme.spacing.unit * 12,
     },
     quote: {
-        fontSize: 24,
+        fontSize: 14,
         paddingLeft: theme.spacing.unit * 2,
         color: '#ffffff',
     },
     footernav: {
         paddingRight: theme.spacing.unit * 2,
         textAlign: "right",
-        fontSize: 24,
+        fontSize: 14,
         color: '#fff',
     },
     footerlink: {
