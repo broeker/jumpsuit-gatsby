@@ -2,9 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-
 const year = new Date().getFullYear();
-
 const styles = theme => ({
     footer: {
         backgroundColor: theme.palette.secondary.main,
@@ -21,7 +19,7 @@ const styles = theme => ({
     footernav: {
         paddingRight: theme.spacing.unit * 2,
         textAlign: "right",
-        fontSize: 14,
+        fontSize: 24,
         color: '#fff',
     },
     footerlink: {
