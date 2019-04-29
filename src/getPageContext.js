@@ -11,18 +11,18 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       light: orange[300],
-      main: orange[800],
+      main: orange[500],
       dark: orange[700],
     },
     secondary: {
       light: blue[300],
-      main: indigo[800],
+      main: blue[600],
       dark: blue[700],
     },
   },
   typography: {
     useNextVariants: true,
-    fontFamily: 'Baloo Bhaina',
+    fontFamily: 'Roboto',
   },
 });
 

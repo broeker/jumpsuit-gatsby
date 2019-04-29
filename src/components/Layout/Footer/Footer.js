@@ -16,17 +16,17 @@ const styles = theme => ({
     quote: {
         fontSize: 24,
         paddingLeft: theme.spacing.unit * 2,
-        color: '#67809F',
+        color: '#ffffff',
     },
     footernav: {
         paddingRight: theme.spacing.unit * 2,
         textAlign: "right",
         fontSize: 14,
-        color: '#67809F',
+        color: '#fff',
     },
     footerlink: {
 
-        color: '#67809F',
+        color: '#fff',
     }
 
 });

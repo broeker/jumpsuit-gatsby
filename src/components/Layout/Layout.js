@@ -28,7 +28,6 @@ const styles = theme => ({
 
 const Layout = (props) => {
 const {children, classes} = props;
-
   return (
     <StaticQuery
       query={graphql`
@@ -51,6 +50,7 @@ const {children, classes} = props;
               ]}
           >
           </Helmet>
+            <html lang="en">
             <Header
                     title={data.site.siteMetadata.title}
                 />
@@ -60,6 +60,7 @@ const {children, classes} = props;
                 </main>
             </div>
             <Footer />
+            </html>
         </>
     )}
     />
