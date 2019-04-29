@@ -14,8 +14,9 @@ const styles = theme => ({
         marginTop: theme.spacing.unit * 12,
     },
     quote: {
-        fontSize: 18,
+        fontSize: 24,
         paddingLeft: theme.spacing.unit * 2,
+        color: '#67809F',
     },
     footernav: {
         paddingRight: theme.spacing.unit * 2,

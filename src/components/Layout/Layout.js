@@ -12,7 +12,6 @@ import { StaticQuery, graphql } from "gatsby"
 import { withStyles } from '@material-ui/core/styles';
 import Header from './Header/Header';
 import Footer from './Footer/Footer'
-import { createGlobalStyle } from "styled-components";
 
 const styles = theme => ({
   main: {
