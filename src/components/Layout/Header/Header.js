@@ -20,7 +20,7 @@ function Header(props) {
       <Headroom className={styles.headroom}>
           <AppBar position="static" color="primary">
               <Toolbar>
-                  <Typography variant="h6" className={styles.logo}>
+                  <Typography variant="h3" className={styles.logo}>
                       <Link to={"/"}>{props.title}</Link>
                   </Typography>
               </Toolbar>
