@@ -23,7 +23,6 @@ const styles = theme => ({
         color: '#fff',
     },
     footerlink: {
-
         color: '#fff',
     }
 
@@ -44,7 +43,7 @@ function Footer(props) {
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
                     <Typography className={classes.footernav}>
-                        &copy; {year} Citizen Tim @ <a className={classes.footerlink} href="https://www.electriccitizen.com">Electric Citizen</a>
+                        &copy; {year} Citizen Tim <a className={classes.footerlink} href="https://www.electriccitizen.com">Electric Citizen</a>
                     </Typography>
                     <Typography className={classes.footernav}>
                         powered by <a className={classes.footerlink} href="https://www.drupal.org">Drupal 8</a> and <a className={classes.footerlink} href="https://www.gatsbyjs.org">Gatsby</a>.

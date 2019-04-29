@@ -41,23 +41,9 @@ class Index extends React.Component {
     const { open } = this.state;
 
     return (
-        <>
         <Layout>
-            <h1>Foo</h1>
-        <Typography variant="h4" gutterBottom>
-          Jumpsuit Material-UI
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          example project
-        </Typography>
-        <Typography gutterBottom>
-          <Link to="/about">Go to the about page</Link>
-        </Typography>
-        <Button variant="contained" color="secondary" onClick={this.handleClick}>
-          Super Secret Password
-        </Button>
+        GRID
         </Layout>
-        </>
     );
   }
 }

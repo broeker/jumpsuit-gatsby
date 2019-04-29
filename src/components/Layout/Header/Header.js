@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-//import NavigationDrawer from '../NavigationDrawer/NavigationDrawer'
+import NavigationDrawer from '../../NavigationDrawer/NavigationDrawer'
 import Headroom from "react-headroom"
 import styles from "./header.module.css"
 
@@ -20,7 +20,8 @@ function Header(props) {
       <Headroom className={styles.headroom}>
           <AppBar position="static" color="primary">
               <Toolbar>
-                  <Typography variant="h4" className={styles.logo}>
+                  <NavigationDrawer />
+                  <Typography variant="h5" className={styles.logo}>
                       <Link to={"/"}>{props.title}</Link>
                   </Typography>
               </Toolbar>
