@@ -22,8 +22,11 @@ const styles = theme => ({
         paddingRight: theme.spacing.unit * 2,
         textAlign: "right",
         fontSize: 14,
+        color: '#67809F',
     },
     footerlink: {
+
+        color: '#67809F',
     }
 
 });
