@@ -7,23 +7,23 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
+import withRoot from "../../withRoot";
+
 
 const styles = theme => ({
    ...theme.mixins.gutters(),
   byline: {
     fontSize: 14,
     fontWeight: 500,
-    color: theme.custom.secondarytext,
+    color: theme.custom.TextSecondary,
     lineHeight: 1.3,
     textDecoration: 'none',
   },
  dateline: {
   fontSize: 14,
-  color: theme.custom.secondarytext,
  },
  title: {
   fontSize: 12,
-  color: theme.custom.secondarytext,
   textDecoration: 'none',
  },
 });
@@ -58,4 +58,4 @@ const AuthorDetails = (props) => {
     );
   };
 
-  export default withStyles(styles)(AuthorDetails);
+export default withRoot(withStyles(styles)(AuthorDetails));

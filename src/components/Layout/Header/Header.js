@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import NavigationDrawer from '../../NavigationDrawer/NavigationDrawer'
 import Headroom from "react-headroom"
 import styles from "./header.module.css"
+import withRoot from "../../../withRoot";
+import {withStyles} from "@material-ui/core";
 
 //import Search from "../Search"
 
@@ -30,4 +32,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default withRoot(withStyles(styles)(Header));

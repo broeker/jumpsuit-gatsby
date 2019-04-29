@@ -8,6 +8,11 @@ import indigo from '@material-ui/core/colors/indigo';
 
 // A theme with custom primary and secondary color.
 const theme = createMuiTheme({
+  custom: {
+    logofont: 'Baloo Bhaina',
+    TextSecondary: '#ffffff',
+    secondarytext: '#666',
+  },
   palette: {
     primary: {
       light: orange[300],
