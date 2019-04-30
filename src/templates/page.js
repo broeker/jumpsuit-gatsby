@@ -1,11 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-
-import Helmet from 'react-helmet';
 import Layout from '../components/Layout/Layout';
 import { withStyles } from '@material-ui/core/styles';
 import Page from '../components/Page/Page';
 import moment from 'moment'
+import withRoot from '../withRoot';
 
 const styles = theme => ({
     root: {
@@ -26,13 +25,6 @@ const pageTemplate = (props) => {
 
     return (
        <Layout>
-       <Helmet
-        title={page.title}
-        meta={[
-          {name: 'description', content: page.title},
-        ]}
-      />
-      
       <div className={classes.root}>
         <Page
               title={page.title}
@@ -46,7 +38,8 @@ const pageTemplate = (props) => {
     )
 };
 
-export default withStyles(styles)(pageTemplate);
+
+export default withRoot(withStyles(styles)(pageTemplate));
 
 export const query = graphql `
   query fooTemplate($slug: String!) {

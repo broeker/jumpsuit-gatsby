@@ -5,6 +5,7 @@ import MarkdownPage from '../components/MarkdownPage/MarkdownPage'
 import Helmet from 'react-helmet';
 import Layout from '../components/Layout/Layout';
 import { withStyles } from '@material-ui/core/styles';
+import withRoot from '../withRoot';
 
 const styles = theme => ({
     root: {
@@ -19,13 +20,7 @@ const mdTemplate = (props) => {
 
     return (
         <Layout>
-       <Helmet
-        title={frontmatter.title}
-        meta={[
-          {name: 'description', data: frontmatter.title},
-        ]}
-      />
-      
+
        <div className={classes.root}>
         <MarkdownPage
               title={frontmatter.title}
@@ -37,8 +32,8 @@ const mdTemplate = (props) => {
     )
 };
 
-export default withStyles(styles)(mdTemplate);
 
+export default withRoot(withStyles(styles)(mdTemplate));
 
 export const query = graphql `
   query($path: String!) {
