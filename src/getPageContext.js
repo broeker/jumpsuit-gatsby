@@ -10,7 +10,6 @@ import indigo from '@material-ui/core/colors/indigo';
 const theme = createMuiTheme({
   custom: {
     logofont: 'Baloo Bhaina',
-    TextSecondary: '#ffffff',
     secondarytext: '#666',
   },
   palette: {

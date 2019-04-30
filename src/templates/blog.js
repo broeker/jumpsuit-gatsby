@@ -46,6 +46,7 @@ export default withStyles(styles)(blogTemplate);
 //
 // Also note the use of field name aliasing in the query. This is done to
 // help normalize the shape of the recipe data.
+
 export const query = graphql `
   query blogTemplate($slug: String!) {
     nodeBlog (fields: { slug: { eq: $slug } }) {

@@ -1,3 +1,9 @@
+/**
+ * gatbsy-config.js is a required file that stores basic configuration and exports the applications React
+ * components.
+ * @type {{plugins: *[], siteMetadata: {author: string, description: string, title: string, slogan: string}}}
+ */
+
 module.exports = {
   siteMetadata: {
     title: `JUMPSUIT.LIFE`,
@@ -13,6 +19,26 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
+
+    // SOURCE DRUPAL
+    {
+      resolve: 'gatsby-source-drupal',
+      options: {
+        baseUrl: 'http://dev-jumpsuit.pantheonsite.io/',
+        apiBase: 'jsonapi', // endpoint of Drupal server
+      },
+    },
+
+    // SOURCE GOOGLE SHEETS
+    {
+      resolve: 'gatsby-source-google-sheets',
+      options: {
+        spreadsheetId: '1CqKrChn44fsm3JnWZm6utsvWfJYTp4AKB12VUMW0yT8',
+        worksheetTitle: 'Sites',
+        credentials: require('./client_secret.json')
+      }
+    },
 
     // SOURCE FILESYSTEM (STATIC IMAGES)
     {
@@ -23,7 +49,7 @@ module.exports = {
       },
     },
 
-    // SOURCE FILESYSTEM (MARKDOWN CONTENT
+    // SOURCE FILESYSTEM (MARKDOWN CONTENT)
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -57,28 +83,6 @@ module.exports = {
     //    chunkSize: 10000, // default: 1000
     //  },
     //},
-
-    // HELMET
-    `gatsby-plugin-react-helmet`,
-
-    // SOURCE DRUPAL
-    {
-      resolve: 'gatsby-source-drupal',
-      options: {
-        baseUrl: 'http://dev-jumpsuit.pantheonsite.io/',
-        apiBase: 'jsonapi', // endpoint of Drupal server
-      },
-    },
-
-    // SOURCE GOOGLE SHEETS
-    {
-      resolve: 'gatsby-source-google-sheets',
-      options: {
-        spreadsheetId: '1CqKrChn44fsm3JnWZm6utsvWfJYTp4AKB12VUMW0yT8',
-        worksheetTitle: 'Sites',
-        credentials: require('./client_secret.json')
-      }
-    },
 
     // MANIFEST
     {

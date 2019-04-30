@@ -14,7 +14,7 @@ const styles = theme => ({
   byline: {
     fontSize: 14,
     fontWeight: 500,
-    color: '#666',
+    color: theme.custom.secondarytext,
     lineHeight: 1.3,
     textDecoration: 'none',
   },
