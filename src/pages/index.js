@@ -9,7 +9,6 @@ import LinkBlog from '../components/LinkBlog/LinkBlog'
 import jumpsuit from '../images/jumpsuit01.svg'
 import JumpsuitTeaser from '../components/JumpsuitTeaser/JumpsuitTeaser'
 import 'typeface-roboto';
-import withRoot from '../withRoot';
 
 import Img from 'gatsby-image';
 
@@ -26,14 +25,12 @@ class Index extends React.Component {
     const Home = () => <><img className={classes.img} alt="jumpsuit" src={jumpsuit} /></>
     if (  this.props.data  ) {
       return (
-          <div>
-            <Grid container spacing={24}>
+            <Grid container spacing={0}>
               <Grid item lg={8}>
-                <Grid container spacing={24}>
+                <Grid container spacing={0}>
                   { this.props.data.allNodeBlog.edges.map(({ node: blog }, key) => {
 
                         var grid;
-
                         if (key === 0) {
                           grid=12
                         } else {
@@ -50,7 +47,6 @@ class Index extends React.Component {
 
                         return (
                             <>
-
                               <Grid className={classes.card} item key={blog.title} lg={grid}>
                                 <BlogCard
                                     title={blog.title}
@@ -74,32 +70,26 @@ class Index extends React.Component {
                 <LinkBlog />
 
               </Grid>
-              <Grid item lg={12}>
-
-                <div className={classes.inlineheader}>JUMPSUIT 101</div>
-                <Home />
-              </Grid>
             </Grid>
 
-          </div>
       );
     }
   }
 
   render() {
+
+      const { classes } = this.props;
     return (
-        <Layout>
-          <Grid container spacing={24}>
-            <>
+            <Layout>
+
               { this.renderElement() }
-            </>
-          </Grid>
-        </Layout>
+                </Layout>
+
     )
   }
 }
 
-export default withRoot(withStyles(styles)(Index));
+export default withStyles(styles)(Index);
 
 export const query = graphql`
   query {

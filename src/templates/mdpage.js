@@ -5,7 +5,6 @@ import MarkdownPage from '../components/MarkdownPage/MarkdownPage'
 import Helmet from 'react-helmet';
 import Layout from '../components/Layout/Layout';
 import { withStyles } from '@material-ui/core/styles';
-import withRoot from '../withRoot';
 
 const styles = theme => ({
     root: {
@@ -33,7 +32,7 @@ const mdTemplate = (props) => {
 };
 
 
-export default withRoot(withStyles(styles)(mdTemplate));
+export default withStyles(styles)(mdTemplate);
 
 export const query = graphql `
   query($path: String!) {

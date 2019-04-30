@@ -4,7 +4,6 @@ import Layout from '../components/Layout/Layout';
 import { withStyles } from '@material-ui/core/styles';
 import Page from '../components/Page/Page';
 import moment from 'moment'
-import withRoot from '../withRoot';
 
 const styles = theme => ({
     root: {
@@ -39,7 +38,7 @@ const pageTemplate = (props) => {
 };
 
 
-export default withRoot(withStyles(styles)(pageTemplate));
+export default withStyles(styles)(pageTemplate);
 
 export const query = graphql `
   query fooTemplate($slug: String!) {

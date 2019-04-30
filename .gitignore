@@ -1,5 +1,9 @@
 # PHP Storm
 .idea
+*~
+
+# Docksal
+docroot
 
 # Logs
 logs

@@ -5,7 +5,6 @@ import Layout from '../components/Layout/Layout'
 import { withStyles } from '@material-ui/core/styles';
 import Blog from '../components/Blog/Blog';
 import moment from 'moment'
-import withRoot from '../withRoot';
 
 const styles = theme => ({
     root: {
@@ -41,7 +40,7 @@ const blogTemplate = (props) => {
     )
 };
 
-export default withRoot(withStyles(styles)(blogTemplate));
+export default withStyles(styles)(blogTemplate);
 // The $drupal_id variable here is obtained from the "context" object passed into
 // the createPage() API in gatsby-node.js.
 //
