@@ -22,6 +22,7 @@ class MarkdownPage extends React.Component {
  const { classes } = this.props;
     return (
     <>
+      boop
 <Typography className={classes.foo} variant="h1" component="h1">{this.props.title}</Typography>
 <AuthorDetails
   changed={this.props.changed}

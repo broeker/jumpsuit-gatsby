@@ -11,6 +11,15 @@ import Header from './Header/Header'
 import Footer from './Footer/Footer'
 
 const styles = theme => ({
+  '@global': {
+    body: {
+      color: '#333',
+      fontFamily: 'Roboto',
+    },
+    a: {
+      textDecoration: 'none'
+    }
+  },
     root: {
         width: 'auto',
         marginLeft: theme.spacing.unit * 3,
@@ -22,6 +31,7 @@ const styles = theme => ({
         },
     },
 });
+
 
 const Layout = (props) => {
   const {children, classes} = props;

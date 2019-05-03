@@ -27,6 +27,14 @@ const theme = createMuiTheme({
   typography: {
     useNextVariants: true,
     fontFamily: 'Roboto',
+    fontSize: 20,
+  h5: {
+    fontFamily: 'Montserrat',
+    fontWeight: 800,
+    fontSize: '2em',
+    color: '#666',
+  },
+
   },
 });
 

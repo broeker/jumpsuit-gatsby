@@ -6,7 +6,7 @@ import {
   Hits,
   connectStateResults,
 } from "react-instantsearch-dom"
-import { Algolia } from "styled-icons/fa-brands/Algolia"
+//import { Algolia } from "styled-icons/fa-brands/Algolia"
 
 import { Root, HitsWrapper, By } from "./styles"
 import Input from "./Input"
@@ -93,7 +93,7 @@ export default class Search extends Component {
           <By>
             Powered by{" "}
             <a href="https://www.algolia.com">
-              <Algolia size="1em" /> Algolia
+              Algolia
             </a>
           </By>
         </HitsWrapper>

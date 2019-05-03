@@ -1,15 +1,13 @@
 import React from 'react';
-import { StaticQuery, Link, graphql } from "gatsby"
-import { withStyles } from '@material-ui/core/styles';
+import { StaticQuery, graphql } from "gatsby"
 import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import styles from "./linkblog.module.css"
 
-const styles = theme => ({
-
-});
-
-
-      //  allGoogleSheetSitesRow (filter: {category: {eq: "Reference" } }) {
 const LinkBlogWrapper = () => (
+
   <StaticQuery
     query={graphql`
       query {
@@ -20,34 +18,45 @@ const LinkBlogWrapper = () => (
               title
               url
               description
-              category
+              speed 
             }
           }
         }
       }
     `}
-    render={data => <GatsbyLinks links={data.allGoogleSheetSitesRow.edges} />}
+    render={data => <GatsbyLinks
+        links={data.allGoogleSheetSitesRow.edges}
+    />
+    }
   />
 );
 
 
 const GatsbyLinks = ({links}) => (
-
 <>
 
-    {
-      links.map(({ node: link }) => (
-        <div key={link.id}>
-          <Link to={link.url}>
-            <Typography variant="h6">{link.title}</Typography>
-          </Link>
 
+                  {
+      links.map(({ node: link }) => (
+        <Card className={styles.cardwrapper} key={link.id}>
+
+          <CardActionArea>
+          <CardContent className={styles.card}>
+          <a href={link.url}>
+            <Typography>{link.title}</Typography>
+          </a>
             {link.description}
-            {link.url}
+            <div className={styles.speed}>
+            <span className={styles.circle}>{link.speed}</span>
             </div>
+          </CardContent>
+
+          </CardActionArea>
+            </Card>
       ))
     }
+
   </>
 );
 
-export default withStyles(styles)(LinkBlogWrapper);;
+export default LinkBlogWrapper;

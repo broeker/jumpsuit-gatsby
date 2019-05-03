@@ -1,0 +1,33 @@
+.cardheader {
+    background-color: #f4f4f4;
+    width: 100%;
+    font-size: 12px;
+    padding: .5em;
+}
+
+.card {
+    background-color: #FFFDE7;
+}
+
+.cardwrapper {
+    margin-bottom: 4px;
+}
+
+.speed {
+    text-align: right;
+    width: 100%;
+}
+
+span.circle {
+    background: #2E7D32;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 5px;
+    text-align: center;
+    width: 1.6em;
+}

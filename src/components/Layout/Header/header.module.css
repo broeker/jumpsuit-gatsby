@@ -7,9 +7,15 @@
     font-family: Baloo Bhaina;
 }
 
-
+.icon {
+    padding-right: 1em;
+}
 .headroom {
     margin-bottom: 2em;
+}
+.searchbox {
+    float:right;
+    width: 100%;
 }
 
 

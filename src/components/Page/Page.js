@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import ParagraphText from '../ParagraphText/ParagraphText';
 import ParagraphImage from '../ParagraphImage/ParagraphImage';
-import GatsbyLinks from '../GatsbyLinks/GatsbyLinks';
 
 const styles = theme => ({
   root: {
@@ -70,9 +69,6 @@ return (
    
  const { classes } = this.props;
     return (
-    <>
-    <GatsbyLinks
-    />
 <Grid container spacing={24} sm={12} md={12} lg={12}>
 <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
 <Typography variant="h1" component="h1">{this.props.title}</Typography>
@@ -88,8 +84,6 @@ return (
 </Grid>
 </Grid>
 
-    
-</>
      )
   }
 }

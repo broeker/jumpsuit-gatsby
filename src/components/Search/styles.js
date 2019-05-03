@@ -17,7 +17,7 @@ export const theme = {
   darkYellow: `#d0d500`,
   lightYellow: `#fbff6c`,
 
-  orange: `#efbf00`,
+  orange: `#FF9800`,
   darkOrange: `#ff9100`,
   lightOrange: `#ffbe41`,
 
@@ -173,7 +173,7 @@ export const HitsWrapper = styled.div`
     margin-bottom: 0.3em;
     h3 {
       color: ${theme.white};
-      background: ${theme.blue};
+      background: ${theme.orange};
       padding: 0.1em 0.4em;
       border-radius: ${theme.smallBorderRadius};
     }

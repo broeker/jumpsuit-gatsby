@@ -80,6 +80,7 @@ exports.createPages = ({ actions, graphql }) => {
                 }
               }
             }
+            
           `).then(result => {
 
             if (result.errors) {

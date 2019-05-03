@@ -21,7 +21,8 @@ import { mdiDrupal } from '@mdi/js'
 import { mdiRocket } from '@mdi/js'
 import { mdiReact } from '@mdi/js'
 import { mdiMenu } from '@mdi/js'
-import { mdiEmoticonNeutralOutline} from '@mdi/js'
+import { mdiEmoticonNeutralOutline } from '@mdi/js'
+import { mdiGamepadCircleRight } from '@mdi/js'
 
 import { mdiGraphql } from '@mdi/js'
 
@@ -57,6 +58,8 @@ const styles = {
   fontSize: 14,
  },
  toggle: {
+    marginRight: 6,
+
    opacity: '.6',
    '&:hover': {
         color: 'white',
@@ -111,10 +114,15 @@ class NavigationDrawer extends React.Component {
             <ListItemIcon><Icon className={classes.icon} color="purple" path={mdiRocket} size={1}/></ListItemIcon>
             <ListItemText classes={{ primary: classes.buttontext }} primary="High Speed Racing" />
           </ListItem>
+
+          <Link to="game">
           <ListItem button key={5}>
-            <ListItemIcon><Icon className={classes.icon} color="red" path={mdiHeart} size={1}/></ListItemIcon>
-            <ListItemText classes={{ primary: classes.buttontext }} primary="Jumpsuit life" />
-          </ListItem>
+            <ListItemIcon><Icon className={classes.icon} color="blue" path={mdiGamepadCircleRight} size={1}/></ListItemIcon>
+
+            <ListItemText classes={{ primary: classes.buttontext }} primary="Play a game" />
+            </ListItem>
+
+          </Link>
         </List>
       </div>
       </>
@@ -122,7 +130,7 @@ class NavigationDrawer extends React.Component {
 
         return (
       <>
-      <IconButton onClick={this.toggleDrawer('left', true)}><Icon path={mdiMenu} size={1.1} color="white" className={classes.toggle}  /></IconButton>
+      <IconButton className={classes.toggle} onClick={this.toggleDrawer('left', true)}><Icon path={mdiMenu} size={1.1} color="white"   /></IconButton>
       <Drawer anchor="left" open={this.state.left} onClose={this.toggleDrawer('left', false)}>
           <div
             tabIndex={0}

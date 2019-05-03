@@ -12,26 +12,32 @@ import { mdiArrowRightBoldCircle} from '@mdi/js'
 import Icon from '@mdi/react'
 import Grid from '@material-ui/core/Grid';
 
-
-
 const styles = {
-  root: {
-    color: '#37474F',
-    height: 'auto',
-  },
   icon: {
-    vertialAlign: 'bottom',
     textAlign: 'right',
   },
   card: {
     height: '100%',
     padding: 0,
-  }
+  },
+  chip: {
+    fontSize: 11,
+    backgroundColor: '#FF9800',
+    width: 'auto',
+    paddingTop: 2,
+    paddingLeft: 5,
+    paddingBottom: 2,
+    paddingRight: 5,
+    display: "inline-block",
+    borderRadius: '15%',
+    marginTop: '.5em',
+    color: '#483C0C',
+    textTransform: 'uppercase',
+  },
 };
 
 class BlogCard extends React.Component {
 
-  
   state = {
     checked: false,
   };
@@ -41,23 +47,17 @@ class BlogCard extends React.Component {
   }; 
 
   renderElement() {
+
     const { classes } = this.props;
-     const { checked } = this.state;
+    const { checked } = this.state;
 
     if (this.props) {
       return (
        <>
-          
-
-       <CardActionArea 
-       
+       <CardActionArea
         onMouseEnter={this.handleChange}
         onMouseLeave={this.handleChange}
        style={{ textDecoration: 'none' }}
-       classes={{
-        root: classes.root, // class name, e.g. `classes-nesting-root-x`
-      }} 
-
        >
         
 
@@ -69,22 +69,19 @@ class BlogCard extends React.Component {
             <CardContent>
             <Grid container>
               <Grid item sm={6}>
-                <Typography variant="overline">{this.props.category}</Typography>
-                              </Grid>
+                <div className={classes.chip}>{this.props.category}</div>
+              </Grid>
               <Grid item className={classes.icon} sm={6}>
+
                 <Fade in={checked} timeout={ 1500 } >
                 <Icon className={classes.icon} color="#ff9800" path={mdiArrowRightBoldCircle} size={1.2}/>
                 </Fade>
               </Grid>
             </Grid>
-              <Typography variant="h3" component="h3">{this.props.title}  
-              
 
-</Typography> 
-              
-                          <Typography variant="subtitle2" dangerouslySetInnerHTML={{ __html: this.props.summary }} />
-              
-                          <AuthorDetails
+              <Typography variant="h5">{this.props.title}</Typography>
+              <Typography dangerouslySetInnerHTML={{ __html: this.props.summary }} />
+              <AuthorDetails
                 changed={this.props.changed}
               />
             </CardContent>
@@ -97,8 +94,7 @@ class BlogCard extends React.Component {
   }
   
   render() {
-
-    return ( 
+    return (
       <>
       { this.renderElement() }
       </>
