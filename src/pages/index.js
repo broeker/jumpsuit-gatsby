@@ -13,12 +13,7 @@ import Link from 'gatsby-link';
 const styles = theme => ({
   fade: {
     opacity: '1',
-    border: 1,
-    "&:hover": {
-      opacity: .5,
-      transition: "all 1s ease-in-out",
 
-}
   }
 });
 
