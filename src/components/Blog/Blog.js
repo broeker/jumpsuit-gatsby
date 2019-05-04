@@ -6,45 +6,37 @@ import ParagraphText from '../ParagraphText/ParagraphText';
 import ParagraphImage from '../ParagraphImage/ParagraphImage';
 import AuthorDetails from '../AuthorDetails/AuthorDetails';
 import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 import { DiscussionEmbed } from "disqus-react";
 
 const styles = theme => ({
-    // custom CSS here ...
-      ...theme.mixins.gutters(),
-      header: {
-        paddingLeft: '3em',
-        paddingRight: '3em',
-        marginBottom: '3em',
+  ...theme.mixins.gutters(),
+  header: {
+    marginBottom: '3em',
+  },
+  chip: {
+    fontSize: 11,
+    backgroundColor: '#FF9800',
+    width: 'auto',
+    paddingTop: 2,
+    paddingLeft: 5,
+    paddingBottom: 2,
+    paddingRight: 5,
+    display: "inline-block",
+    borderRadius: '15%',
+    marginTop: '.5em',
+    marginBottom: '1em',
+    color: '#483C0C',
+    textTransform: 'uppercase',
+  },
 
-      },
-      foo: {
-      color: 'red',
-      padding: '2em',
-      marginBottom: '4em',
-      width: '80%',
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      },
-      body: {
-        width: '80%',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-      },
-      disqus: {
-        width: '80%',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginTop: '6em',
-      }
+  disqus: {
+    width: '80%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: '6em',
+  }
 });
-
-export const style = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-}
-
 
 class Blog extends React.Component {
   renderElement() {
@@ -91,27 +83,26 @@ class Blog extends React.Component {
 
       return ( 
         <>
-                   <div style={style}> 
-        <Card className={classes.foo}>
-
+        <Card className={classes.header}>
+          <CardContent>
         {this.props.media.localFile &&
         <Img fluid={this.props.media.localFile.childImageSharp.fluid} />
         }
       
-        <Typography variant="overline">{this.props.category}</Typography>
+
+        <div className={classes.chip}>{this.props.category}</div>
         <Typography variant="h1" component="h1">{this.props.title}</Typography>
         <Typography variant="subtitle1" dangerouslySetInnerHTML={{ __html: this.props.summary }} />
               <AuthorDetails
                 changed={this.props.changed}
               />
-        
+          </CardContent>
         </Card>
        
-        <Typography className={classes.body} variant="body1">
+        <Typography variant="body1">
         { this.renderElement() }
         </Typography>
-        </div>
-          <div className={classes.disqus} > 
+          <div className={classes.disqus} >
         <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
         </div>
         </>

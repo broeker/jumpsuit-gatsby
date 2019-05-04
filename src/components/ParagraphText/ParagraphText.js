@@ -17,7 +17,7 @@ const ParagraphText = (props) => {
 
   return (
     <>
-      <Typography className={classes.subhead} variant="h3">{props.header}</Typography>
+      <Typography variant="h5">{props.header}</Typography>
       <Typography dangerouslySetInnerHTML={{ __html: props.text }} variant="body1" />
     </>
   );

@@ -11,8 +11,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Icon from '@mdi/react'
-import { mdiHeart } from '@mdi/js'
-
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'gatsby'
 import AvatarImage from '../AvatarImage/AvatarImage';

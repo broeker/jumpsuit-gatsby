@@ -77,6 +77,16 @@ module.exports = {
       },
     },
 
+    // REACT SVG
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/ // See below to configure properly
+        }
+      }
+    },
+
     // ALGOLIA
     {
       resolve: `gatsby-plugin-algolia`,

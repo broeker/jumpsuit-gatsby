@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    style="isolation:isolate"
@@ -15,7 +16,7 @@
    height="779.188"
    version="1.1"
    id="svg7443"
-   sodipodi:docname="jumpsuit01.svg"
+   sodipodi:docname="jumpsuit.svg"
    inkscape:version="0.92.4 (unknown)">
   <metadata
      id="metadata7447">
@@ -25,6 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -42,8 +44,8 @@
      id="namedview7445"
      showgrid="false"
      inkscape:zoom="1.0831789"
-     inkscape:cx="230.565"
-     inkscape:cy="389.59399"
+     inkscape:cx="156.70832"
+     inkscape:cy="515.79856"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -5402,10 +5404,33 @@
      x="128.32599"
      y="43.3908" />
   <rect
-     style="fill:#ff7f2a;fill-rule:evenodd"
+     style="fill:#ff7f2a;fill-rule:evenodd;fill-opacity:0.63101602;opacity:0"
      id="rect8277"
      width="106.16898"
      height="32.312294"
      x="128.32599"
      y="43.3908" />
+  <rect
+     style="fill:#ff6600;fill-rule:evenodd;fill-opacity:0.70588237;opacity:0"
+     id="rect8298"
+     width="106.16898"
+     height="32.312294"
+     x="128.32599"
+     y="43.3908"
+     onmouseover="this.style.opacity=1"
+     onmouseout="this.style.opacity=0" />
+  <a
+     xlink:href="page/gatsby"
+     style="opacity:0"
+     id="a8302">
+    <rect
+       onmouseout="this.style.opacity=0"
+       onmouseover="this.style.opacity=1"
+       y="43.3908"
+       x="128.32599"
+       height="29.542673"
+       width="96.93689"
+       id="rect8300"
+       style="opacity:0.88599997;fill:#ff6600;fill-opacity:0.63636361;fill-rule:evenodd" />
+  </a>
 </svg>

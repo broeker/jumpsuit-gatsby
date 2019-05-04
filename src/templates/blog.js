@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
 import Layout from '../components/Layout/Layout'
 import { withStyles } from '@material-ui/core/styles';
 import Blog from '../components/Blog/Blog';

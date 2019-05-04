@@ -4,7 +4,6 @@ import { SheetsRegistry } from 'jss';
 import { createMuiTheme, createGenerateClassName } from '@material-ui/core/styles';
 import orange from '@material-ui/core/colors/orange';
 import blue from '@material-ui/core/colors/blue';
-import indigo from '@material-ui/core/colors/indigo';
 
 // A theme with custom primary and secondary color.
 const theme = createMuiTheme({
@@ -28,13 +27,18 @@ const theme = createMuiTheme({
     useNextVariants: true,
     fontFamily: 'Roboto',
     fontSize: 20,
-  h5: {
-    fontFamily: 'Montserrat',
-    fontWeight: 800,
-    fontSize: '2em',
-    color: '#666',
-  },
-
+    h1: {
+      fontFamily: 'Montserrat',
+      fontWeight: 800,
+      fontSize: '2em',
+      color: '#666',
+    },
+    h5: {
+      fontFamily: 'Montserrat',
+      fontWeight: 800,
+      fontSize: '1.2em',
+      color: '#666',
+    },
   },
 });
 

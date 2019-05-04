@@ -9,7 +9,6 @@ import LinkBlog from '../components/LinkBlog/LinkBlog'
 import JumpsuitCard from '../components/JumpsuitCard/JumpsuitCard'
 import Img from 'gatsby-image';
 import Link from 'gatsby-link';
-import Fade from '@material-ui/core/Fade';
 
 const styles = theme => ({
   fade: {
@@ -36,7 +35,6 @@ class Index extends React.Component {
   renderElement() {
 
     const { classes } = this.props;
-    const { checked } = this.state;
 
     if (  this.props.data  ) {
       return (
@@ -97,7 +95,6 @@ class Index extends React.Component {
 
   render() {
 
-    const { classes } = this.props;
     return (
       <Layout>
         { this.renderElement() }

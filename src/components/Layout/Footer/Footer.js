@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 const year = new Date().getFullYear();
 const styles = theme => ({
     footer: {
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: '#091A29',
         paddingTop: theme.spacing.unit * 2,
         paddingBottom: theme.spacing.unit * 8,
         color: '#ffffff',

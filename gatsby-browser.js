@@ -7,3 +7,4 @@ require("typeface-roboto");
 require("typeface-rubik");
 require("typeface-baloo-bhaina");
 require('typeface-montserrat');
+require('typeface-pt-mono');

@@ -14,7 +14,6 @@ const searchIndices = [
 ]
 
 function Header(props) {
-  const { classes } = props;
   return (
       <Headroom className={styles.headroom}>
           <AppBar position="static" color="primary">

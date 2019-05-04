@@ -60,21 +60,15 @@ class JumpsuitCard extends React.Component {
     if (this.props) {
       return (
         <>
-
-
           <CardActionArea
-
             onMouseEnter={this.handleChange}
             onMouseLeave={this.handleChange}
             style={{ textDecoration: 'none' }}
             classes={{
               root: classes.root, // class name, e.g. `classes-nesting-root-x`
             }}
-
           >
-
-
-            <Link style={{ textDecoration: 'none'}} to={this.props.path}>
+            <Link style={{ textDecoration: 'none'}} to="factsheet">
               <Card className={classes.card}>
                 <CardContent>
                   <div className={classes.hwrapper}>
@@ -83,7 +77,7 @@ class JumpsuitCard extends React.Component {
                 </Fade>
                   </div>
                   <div className={classes.wrapper}>
-                  <Typography className={classes.cardHeader} component="span">JUMPSUIT FACTS</Typography>
+                  <Typography className={classes.cardHeader} component="span">JUMPSUIT FACTSHEET</Typography>
                   <JumpsuitTeaser />
                   </div>
                 </CardContent>
