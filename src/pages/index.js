@@ -145,7 +145,7 @@ export const query = graphql`
       sort: {
         fields: [changed], order:DESC
       }
-      limit: 3
+      limit: 5
       ) 
       {
       edges {

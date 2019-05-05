@@ -72,7 +72,6 @@ class BlogCard extends React.Component {
                 <div className={classes.chip}>{this.props.category}</div>
               </Grid>
               <Grid item className={classes.icon} sm={6}>
-
                 <Fade in={checked} timeout={ 1500 } >
                 <Icon className={classes.icon} color="#ff9800" path={mdiArrowRightBoldCircle} size={1.2}/>
                 </Fade>
