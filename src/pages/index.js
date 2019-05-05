@@ -14,6 +14,9 @@ const styles = theme => ({
   fade: {
     opacity: '1',
 
+  },
+  card: {
+    backgroundColor: 'none',
   }
 });
 
@@ -35,12 +38,15 @@ class Index extends React.Component {
       return (
         <Grid container spacing={24}>
           <Grid item lg={8}>
+
             <Grid container spacing={24}>
+
               { this.props.data.allNodeBlog.edges.map(({ node: blog }, key) => {
 
                 var grid;
                 var media;
 
+                // set grid to full width for first item
                 if (key === 0) {
                   grid=12
                 } else {
@@ -55,7 +61,7 @@ class Index extends React.Component {
 
                 return (
                 <>
-                  <Grid className={classes.card} item key={blog.title} lg={grid}>
+                  <Grid className={classes.card} item key={blog.title} md={grid} lg={grid}>
                     <BlogCard
                       title={blog.title}
                       summary={blog.summary.processed}
@@ -72,17 +78,25 @@ class Index extends React.Component {
               }
             </Grid>
           </Grid>
-            <Grid item lg={4}>
-              <JumpsuitCard />
-            <div className={classes.fade}>
-             <Link to="/">
-              <Img
-               fluid={this.props.data.imageTwo.childImageSharp.fluid}
-             />
-             </Link>
-            </div>
-              <LinkBlog />
+          <Grid item sm={12} md={12} lg={4}>
+
+            <Grid container spacing={24}>
+              <Grid item sm={6} md={6} lg={12}>
+                <JumpsuitCard />
+              </Grid>
+              <Grid item sm={6} md={6} lg={12}>
+                <Link to="/">
+                  <Img
+                    fluid={this.props.data.imageTwo.childImageSharp.fluid}
+                  />
+                </Link>
+                <LinkBlog />
+              </Grid>
             </Grid>
+
+          </Grid>
+
+
         </Grid>
       );
     }

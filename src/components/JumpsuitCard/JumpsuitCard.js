@@ -23,6 +23,7 @@ const styles = {
     height: '100%',
     padding: 0,
     border: 0,
+    width: '100%',
   },
   cardHeader: {
     border: 1,
